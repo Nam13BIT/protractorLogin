@@ -1,18 +1,19 @@
 import { by, browser, element, protractor } from "protractor";
 import 'jasmine';
-describe('Incorrect log in', function(){
+import {logInPage} from './login.po';
+import {manageTests} from './mana.po'; 
+describe('Log in page', function(){
+  let page: logInPage;
   const EC = protractor.ExpectedConditions;
   beforeEach(function() {
+    page = new logInPage;
     browser.get('http://192.168.171.191:4200/#/login');
   });   
-  var userName = element(by.xpath("//input[@id='Username']"));
-  var passWord = element(by.xpath("//input[@id='Password']"));
-  var buttonText = element(by.xpath("//button[@id='logIn']"));
-  it('should display an error message to the user if they provided incorrect credentials and stay at the log in page', () => {
-    userName.sendKeys('tester');
-    passWord.sendKeys('12345');
-    browser.wait(EC.visibilityOf(element(by.xpath("//button[@id='logIn']"))));
-    var manageTets = element(by.xpath("//span[@class='text-left']"));
-    expect(buttonText.getText()).toEqual('Login');
+  it('should redirect user to log in page if they provided incorrect credentials', () => {
+    page.username.sendKeys('tester');
+    page.password.sendKeys('12345');
+    page.loginButton.click();
+    browser.wait(EC.visibilityOf(page.loginButton));
+    expect(page.loginButton.getText()).toEqual('Login');
   })
 }); 
