@@ -1,0 +1,17 @@
+{
+  "name": "protractorlogin",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".js",
+  "dependencies": {
+    "node": "^12.11.0",
+    "protractor": "^5.4.2",
+    "typescript": "^3.6.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
