@@ -1,0 +1,20 @@
+{
+  "name": "incontact_lire_tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@types/node": "^12.11.2",
+    "jasmine": "^3.5.0",
+    "protractor": "^5.4.2",
+    "typescript": "^3.6.4"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^3.4.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
